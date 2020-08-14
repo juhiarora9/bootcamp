@@ -9,3 +9,6 @@ editor_options:
 ---
 
 Welcome to my research website.
+
+Checkout my [Differential Expression Analysis](differential-expression.html)
+
