@@ -5,9 +5,9 @@ do
   for rep in {01..06}
   do
     echo "$type-$rep"
-    fastq_="fastq/$type-$rep.fastq.gz"
+    fastq="fastq/$type-$rep.fastq.gz"
     bam="bam/$type-$rep.bam"
-    echo subread-align_ -i genome/index \
+    echo subread-align -i genome/index \
       -r "$fastq" -t 0 -o "$bam" \
       | qsub -A ghp3_c_t_lc_default -d . -l pmem=16gb \
       -N "$type-$rep" -j oe -o "log/map-reads-$type-$rep.log"
